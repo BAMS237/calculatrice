@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculatrice</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"> 
+    let display = document.getElementById('display');
+    let memory = '';
+</script>
+<body>
+    <div class="cal">
+  <input type="text" id="display" readonly>
+
+  <br>
+ <div>
+  <button onclick="appendToDisplay('1')">1</button>
+  <button onclick="appendToDisplay('2')">2</button>
+  <button onclick="appendToDisplay('3')">3</button>
+  <button onclick="appendToDisplay('+')">+</button>
+
+</div> <br>
+<div>
+  <button onclick="appendToDisplay('4')">4</button>
+  <button onclick="appendToDisplay('5')">5</button>
+  <button onclick="appendToDisplay('6')">6</button>
+  <button onclick="appendToDisplay('-')">-</button>
+
+</div><br>
+
+<div>
+  <button onclick="appendToDisplay('7')">7</button>
+  <button onclick="appendToDisplay('8')">8</button>
+  <button onclick="appendToDisplay('9')">9</button>
+  <button onclick="appendToDisplay(' * ')">x</button>
+
+</div>
+
+
+<br>
+
+<div>
+  <button onclick="appendToDisplay('0')">0</button>
+  <button onclick="calculate() ; calculerAjouterHistorique()"> = </button>
+  <button onclick = "clearDisplay()"> clear </button>
+  <button onclick="appendToDisplay('/')">/</button>
+
+</div>
+      
+<br>
+
+
+ <div>
+  <button onclick="calculateSin()">sin</button>
+  <button onclick="calculateCos()">cos</button>
+  <button onclick="calculateSquare()">a²</button>
+  <button onclick="memoryRecall()">MR</button>
+</div>
+
+
+</div>  
+
+
+<div>
+  <h2>historique des operations</h2>
+
+  <textarea name="" id="historique"></textarea>
+</div>
+
+
+
+</body>
+</html>
